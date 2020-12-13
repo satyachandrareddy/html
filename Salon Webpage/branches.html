@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Salon Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-with-button-logo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<style>
+		body{
+			background-color: ghostwhite;
+		}
+        table, tr, td{
+            border: 2px dotted blue;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+	<ul class="navbar-nav ml-auto">
+		<li class="nav-item">
+            <a class="nav-link" href="signup.html" style="color: white"><button type="button" class="btn btn-outline-primary">Register</button></a>
+		</li>
+		<li class="nav-item">
+            <a class="nav-link" href="sign%20in.html" style="color: white"> <button type="button" class="btn btn-outline-success">Log In</button></a>
+		</li>
+	</ul>
+</nav>
+<!-- Nav Bar-->
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+		<a class="navbar-brand" href="#">
+			<img src="logo.png" alt="Logo" style="width: 35px" class="d-inline-block align-top"> Alloy Salon Services
+		</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="frontend.html">Home</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Branches<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="aboutus.html">About Us</a>
+			</li>
+            <li class="nav-item">
+                <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="styles.html">Styles</a>
+            </li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	</div>
+</nav>
+<br><br>
+<div>
+    <table width="100%">
+        <tr>
+            <td style="text-align: center;">City</td>
+            <td style="text-align: center;">Salon Address</td>
+            <td style="text-align: center;">Contact number</td>
+        </tr>
+        <tr>
+            <td>Jabalpur</td>
+            <td>Shop No. 9, Sadar Main Marg, Opp. Spyker Showroom, Near Indian Coffee House, Sadar Bazar Cantt, Jabalpur, Madhya Pradesh 482 001</td>
+            <td>8889402167 / 7777887949</td>
+        </tr>
+        <tr>
+            <td>Bhopal</td>
+            <td>Shop No. M-11, 138/42, 1st floor, Usha Preet Complex, Above CCD, Opp. Apex Bank, Malviya Nagar, Bhopal, Madhya Pradesh 462003</td>
+            <td>0755-4010004</td>
+        </tr>
+        <tr>
+            <td>Indore</td>
+            <td>1st Floor, GTC 181-182, Scheme No. 54 PU4, Behind C21 Mall & Malhar Mall, Vijay Nagar, Indore, Madhya Pradesh 452010</td>
+            <td>0731-4062500</td>
+        </tr>
+        <tr>
+            <td>Raipur</td>
+            <td>Shop No.1, KOAS Plaza, Shankar Nagar, Next to Delhi Darbar Fine Dine, Opp. Gold’s Gym, Rajiv Nagar Road, Raipur Chattisgarh -492007</td>
+            <td>0771-6559888</td>
+        </tr>
+        <tr>
+            <td>Ambikapur</td>
+            <td>First floor, Pandit Shiv Dhari Complex, Beside Maya Hotel, Din Dayal Chowk, Bramha Path Road, Dist Surguja, Ambikapur, Chhattisgarh 497001</td>
+            <td>9300575000 / 8962327832</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Delhi</td>
+            <td>Shop No. 1, C-782, Guru Virjanand Marg, Beside Giani Ice Cream, Near Federal Bank ATM, Block C, Vikaspuri, Delhi 110018</td>
+            <td>08383001982 / 08810563410</td>
+        </tr>
+        <tr>
+            <td>Shop No. A-33, Block 17, Munshi Ram Sethi Marg, Opp. Grass Roots Play School, West Patel Nagar, Patel Nagar, New Delhi, Delhi 110008</td>
+            <td>9899706301</td>
+        </tr>
+    </table>
+</div>
+
+<!--Footer-->
+<div class="content">
+</div>
+<footer id="myFooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h2 class="logo"><img src="logo.png" alt="Logo" style="width: 150px"></h2>
+            </div>
+            <div class="col-sm-2">
+                <h5>Get started</h5>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="#">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>About us</h5>
+                <ul>
+                    <li><a href="#">Company Information</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help desk</a></li>
+                    <li><a href="#">Forums</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <div class="social-networks">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                </div>
+            <div>
+                <a href="contact.html"><button type="button" class="btn btn-default">Contact us</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>&copy; 2019 Copyright, Alloy Salon Services </p>
+    </div>
+    </div>
+</footer>
+</body>
+</html>

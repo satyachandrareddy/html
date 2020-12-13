@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Salon Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-with-button-logo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   	<style>
+		body{
+           background-color: lightblue;
+
+        }
+        label{
+            color: blueviolet;
+            font-size: 20px;
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+	<ul class="navbar-nav ml-auto">
+		<li class="nav-item">
+            <a class="nav-link" href="signup.html" style="color: white"><button type="button" class="btn btn-outline-primary">Register</button></a>
+		</li>
+		<li class="nav-item">
+            <a class="nav-link" href="sign%20in.html" style="color: white"> <button type="button" class="btn btn-outline-success">Log In</button></a>
+		</li>
+	</ul>
+</nav>
+<!-- Nav Bar-->
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+		<a class="navbar-brand" href="#">
+			<img src="logo.png" alt="Logo" style="width: 35px" class="d-inline-block align-top"> Alloy Salon Services
+		</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="frontend.html">Home</a>
+			</li>
+			<li class="nav-item">
+                <a class="nav-link" href="branches.html">Branches</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="aboutus.html">About Us</a>
+			</li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Bookings<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="styles.html">Styles</a>
+            </li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	</div>
+</nav>
+<br><br>
+<div style="margin: 50px">
+<form>
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationDefault01">First name</label>
+            <input type="text" class="form-control" id="validationDefault01" placeholder="First name" required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationDefault02">Last name</label>
+            <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationDefaultUsername">Username</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                </div>
+                <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault03">State</label>
+            <select class="custom-select">
+                <option selected id="validationDefault03">None selected</option>
+                <option value="1">Telangana</option>
+                <option value="2">Maharastra</option>
+                <option value="3">Punjab</option>
+            </select>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault04">City</label>
+            <select class="custom-select">
+                <option selected id="validationDefault04">None selected</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault05">Landmark</label>
+            <input type="text" class="form-control" id="validationDefault05" placeholder="Landmark" required>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault06">Pin Code</label>
+            <input type="number" class="form-control" id="validationDefault06" placeholder="Pincode" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault07">Time Slot</label>
+            <select class="custom-select">
+                <option selected id="validationDefault07">None selected</option>
+                <option value="1">9AM</option>
+                <option value="2">11AM</option>
+                <option value="3">1PM</option>
+                <option value="3">5PM</option>
+                <option value="3">6PM</option>
+            </select>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault08">Select the style you want</label>
+            <select class="custom-select">
+                <option selected id="validationDefault08">None selected</option>
+                <option value="1">Hair Style 1</option>
+                <option value="2">Hair Style 2</option>
+                <option value="3">Hair Style 3</option>
+                <option value="4">Hair Style 4</option>
+                <option value="5">Hair Style 5</option>
+                <option value="6">Hair Style 6</option>
+            </select>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault09">Select the mode of payment</label>
+            <select class="custom-select">
+                <option value="2" id="validationDefault09">None selected</option>
+                <option value="1">Cash</option>
+                <option value="2">Net Banking</option>
+                <option value="3">Wallets</option>
+            </select>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault10">Coupons</label><br>
+            <a href="coupon.html" class="btn btn-primary btn-md active" id="validationDefault10" role="button" aria-pressed="true">Click here</a>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault12">Date</label>
+           <input type="date" id="validationDefault12" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="custom-control custom-switch"><br>
+            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">Do you want to avail extra benefits?</label>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationDefault11">Paste coupon code here</label>
+            <input type="text" class="form-control" id="validationDefault11" placeholder="Paste code here" aria-describedby="inputGroupPrepend2" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="invalidCheck2" required>
+            <label class="form-check-label" for="invalidCheck2">
+                Agree to terms and conditions
+            </label>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-secondary" type="reset">Reset form</button>
+</form>
+</div>
+<!--Footer-->
+<div class="content">
+</div>
+<footer id="myFooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h2 class="logo"><img src="logo.png" alt="Logo" style="width: 150px"></h2>
+            </div>
+            <div class="col-sm-2">
+                <h5>Get started</h5>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="#">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>About us</h5>
+                <ul>
+                    <li><a href="#">Company Information</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help desk</a></li>
+                    <li><a href="#">Forums</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <div class="social-networks">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                </div>
+            <div>
+                <a href="contact.html"><button type="button" class="btn btn-default">Contact us</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>&copy; 2019 Copyright, Alloy Salon Services </p>
+    </div>
+    </div>
+</footer>
+</body>
+</html>
