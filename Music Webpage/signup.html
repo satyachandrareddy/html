@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <script>
+        let button = document.querySelector('.button');
+        let buttonText = document.querySelector('.tick');
+
+        const tickMark = "<svg width=\"58\" height=\"45\"=\"0 0 58 45\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#fff\" fill-rule=\"nonzero\" d=\"M19.11 44.64L.27 25.81l5.66-5.66 13.18 13.18L52.07.38l5.65 5.65\"/></svg>";
+
+        buttonText.innerHTML = "Submit";
+
+        button.addEventListener('click', function() {
+
+            if (buttonText.innerHTML !== "Submit") {
+                buttonText.innerHTML = "Submit";
+            } else if (buttonText.innerHTML === "Submit") {
+                buttonText.innerHTML = tickMark;
+            }
+            this.classList.toggle('button__circle');
+        });
+    </script>
+    <style>
+        body{
+            background: url("Brass-626x417.png") no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+        ::placeholder{
+            color: blue;
+            opacity: 0.8;
+        }
+        .form-div{
+            border: 2px solid red;
+            width:250px;
+            text-align: center;
+            border-radius:15px;
+            box-shadow:0 0 15px limegreen;
+            margin: 70px auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .form-div img{
+            width: 100px;
+            margin-top: -50px;
+        }
+        input[type='email'], input[type='password'], input[type='text']{
+            border-radius: 15px;
+            outline: none;
+            padding: 7px;
+            height:20px;
+            text-align: center;
+            margin:10px;
+            border: 2px solid red;
+        }
+        input[type='email']:hover, input[type='password']:hover, input[type='text']:hover{
+            background-color: lightblue;
+        }
+        input[type='submit']{
+            border-radius: 5px;
+            border: none;
+            background-color: teal;
+            margin: 5px 0 10px 0;
+            padding:5px 20px;
+            font-size: 20px;
+            color: white;
+            outline:none;
+        }
+        /*input[type='reset']{
+            border-radius: 15px;
+            border: none;
+            background-color: green;
+            margin: 5px 0 10px 0;
+            padding:3px 15px;
+            font-size: 20px;
+            color: white;
+            outline:none;
+        }*/
+        input[type='submit']:hover /*input[type='reset']:hover*/{
+            cursor: pointer;
+            box-shadow: 3px 3px 3px white;
+            opacity: 0.8;
+        }
+
+
+        /*Button 2*/
+
+        /* Global Button Styles */
+        a.animated-button:link, a.animated-button:visited {
+            position: relative;
+            display: block;
+            margin: 30px auto 0;
+            padding: 14px 15px;
+            color: #fff;
+            font-size:14px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            letter-spacing: .08em;
+            border-radius: 0;
+            text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+        a.animated-button:link:after, a.animated-button:visited:after {
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 200%;
+            z-index: -1;
+            -webkit-transition: all 0.75s ease 0s;
+            -moz-transition: all 0.75s ease 0s;
+            -o-transition: all 0.75s ease 0s;
+            transition: all 0.75s ease 0s;
+        }
+        a.animated-button:link:hover, a.animated-button:visited:hover {
+            color: #FFF;
+            text-shadow: none;
+        }
+        a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+            height: 450%;
+        }
+        a.animated-button:link, a.animated-button:visited {
+            position: relative;
+            display: block;
+            margin: 30px auto 0;
+            padding: 14px 15px;
+            color: #fff;
+            font-size:14px;
+            border-radius: 0;
+            font-weight: bold;
+            text-align: center;            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            letter-spacing: .08em;
+            text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+        a.animated-button.victoria-one {
+            border: 2px solid #D24D57;
+            margin: 10px 50px;
+            box-shadow: 0 0 10px gold;
+        }
+        a.animated-button.victoria-one:after {
+            background: #D24D57;
+            -moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+            -ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+            -webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+            transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+        }
+    </style>
+</head>
+<body>
+<div class="form-div">
+    <img src="logo.png">
+    <h2 style="color: limegreen;text-shadow: 2px 2px 2px orangered">Sign Up Here</h2>
+    <form>
+        <input type="text" placeholder="First Name" required>
+        <br>
+        <input type="text" placeholder="Last Name" required>
+        <br>
+        <input type="text" placeholder="User Name" required>
+        <br>
+        <input type="email" placeholder="Email" required>
+        <br>
+        <input type="password" placeholder="Password" required>
+        <br>
+        <input type="submit" value="Submit">
+        <!--&nbsp;
+        <input type="reset" value="Reset">-->
+
+
+        <a href="login.html" class="btn btn-sm animated-button victoria-one">Back - login</a>
+
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Old Songs</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("Boat-Wallpaper-051-1920x1184.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        /*Songs*/
+        table {
+            width: 100%;
+            border: 2px solid red;
+            background-color: black;
+        }
+        table, tr, td, th{
+            border: 2px solid yellow;
+            text-align: center;
+            padding: 20px;
+        }
+        table th{
+            background-color: lightskyblue;
+            font-size: 35px;
+            color: deeppink;
+            text-shadow: 2px 2px 2px white;
+            font-family: Serif;
+        }
+        table th:hover{
+            text-shadow: 2px 2px 2px black;
+            font-family:  "Comic Sans MS";
+            transition: 1s;
+        }
+        img{
+            border: 1px solid green;
+            box-shadow: 0 0 20px gold;
+            border-radius: 10px;
+            margin-top: 9px;
+        }
+        img:hover{
+            border: 1px solid orangered;
+            box-shadow: 0 0 20px lawngreen;
+            cursor: pointer;
+            border-radius: 20px;
+            transform: scale(1.2,1.2);
+            transition: 0.6s;
+        }
+        audio{
+            outline: none;
+        }
+        audio:hover{
+            transform: scale(1.2,1.2);
+            transition: 0.3s;
+            cursor: pointer;
+            box-shadow: 0 0 40px hotpink;
+            border-radius: 30px;
+        }
+        .p{
+            font-size: 26px;
+            margin-top: 30px;
+            margin-bottom: -15px;
+            color: white;
+        }
+        .p:hover{
+            cursor: pointer;
+            color: gold;
+            text-shadow: 2px 2px 2px red;
+            font-family: "Comic Sans MS";
+        }
+
+        /* The side navigation menu */
+        .sidenav {
+            height: 100%; /* 100% Full-height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0; /* Stay at the top */
+            left: 0;
+            background-color: black; /* Black*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+        footer{
+            bottom: 0;
+        }
+        .footer-distributed{
+            background-color: #292c2f;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+            padding: 15px 50px;
+            margin: 100px 0 -20px ;
+        }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right{
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .footer-distributed .footer-left{
+            width: 40%;
+        }
+
+        .footer-distributed h3{
+            color:  #ffffff;
+            font: normal 36px 'Cookie', cursive;
+            margin: 0;
+        }
+
+        .footer-distributed h3 span{
+            color:  #5383d3;
+        }
+
+
+        .footer-distributed .footer-links{
+            color:  #ffffff;
+            margin: 20px 0 12px;
+            padding: 0;
+        }
+
+        .footer-distributed .footer-links a{
+            display:inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color:  inherit;
+        }
+
+        .footer-distributed .footer-company-name{
+            color:  #8f9296;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+
+        .footer-distributed .footer-center{
+            width: 35%;
+        }
+
+        .footer-distributed .footer-center i{
+            background-color:  #33383b;
+            color: #ffffff;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+
+        .footer-distributed .footer-center i.fa-envelope{
+            font-size: 17px;
+            line-height: 38px;
+        }
+
+        .footer-distributed .footer-center p{
+            display: inline-block;
+            color: #ffffff;
+            vertical-align: middle;
+            margin:0;
+        }
+
+        .footer-distributed .footer-center p span{
+            display:block;
+            font-weight: normal;
+            font-size:14px;
+            line-height:2;
+        }
+
+        .footer-distributed .footer-center p a{
+            color:  #5383d3;
+            text-decoration: none;;
+        }
+
+        .footer-distributed .footer-right{
+            width: 20%;
+        }
+
+        .footer-distributed .footer-company-about{
+            line-height: 20px;
+            color:  #92999f;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-company-about span{
+            display: block;
+            color:  #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-distributed .footer-icons{
+            margin-top: 25px;
+        }
+
+        .footer-distributed .footer-icons a{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color:  #33383b;
+            border-radius: 2px;
+
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+
+
+        @media (max-width: 880px) {
+
+            .footer-distributed{
+                font: bold 14px sans-serif;
+
+            }
+
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right{
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .footer-distributed .footer-center i{
+                margin-left: 0;
+            }
+        }
+        .card{
+            border: 2px solid orangered;
+            box-shadow: 0 0 13px black;
+        }
+        .card:hover{
+            border: 2px dotted lightskyblue;
+            box-shadow: 0 0 15px snow;
+        }
+    </style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#"><i class="fas fa-headphones-alt"></i> My Music</a>
+    <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login/Sign-Up</a>
+    <a href="contact.html"><i class="far fa-address-book"></i> Queries</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span style="font-size:40px;cursor:pointer; color: white" onclick="openNav()">&#9776;</span>
+
+<div id="main">
+
+    <!-- Cards -->
+
+    <table width="100%">
+        <tr>
+            <th>Image</th>
+            <th>Song</th>
+        </tr>
+        <tr>
+            <td><img src="cdv-aj.jpg" width="200" height="200">
+                <p class="p">Faded</p></td>
+            <td><audio controls>
+                <source src="Alan%20Walker%20-%20Faded%20(Restrung).mp3">
+            </audio></td>
+        </tr>
+        <tr>
+            <td><img src="c523b7e5453796a596ab007255be1598.jpg" width="200" height="200">
+                <p class="p">How Long</p></td>
+            <td><audio controls>
+                <source src="Charlie%20Puth%20-%20How%20Long.mp3">
+            </audio></td>
+        </tr>
+        <tr>
+            <td><img src="00602557123814-cover-zoom.jpg" width="200" height="200">
+                <p class="p">Let Me Love You</p></td>
+            <td><audio controls>
+                <source src="DJ%20Snake%20-%20Let%20Me%20Love%20You.mp3">
+            </audio></td>
+        </tr>
+        <tr>
+            <td><img src="5c8131af7d5d20f3c8f296538af74308.1000x1000x1.jpg" width="200" height="200">
+                <p class="p">End Game</p></td>
+            <td><audio controls>
+                <source src="Ed%20Sheeran%20-%20End%20Game.mp3">
+            </audio></td>
+        </tr>
+    </table>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3>Alloy<span>Music</span></h3>
+
+            <p class="footer-links">
+                <a href="home.html">Home</a>
+                ·
+                <a href="#">My Music</a>
+                ·
+                <a href="login.html">Login/Sign-Up</a>
+                ·
+                <a href="contact.html">Queries</a>
+            </p>
+
+            <p class="footer-company-name">AlloyMusic &copy; 2019</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Lovely Professional University</span> Punjab, India</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91-7536667788</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="#">contact@alloymusic.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span>
+                Alloy Music is the most popular online music streaming website &amp; where all the fun is waiting for you ;-)
+            </p>
+
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+</div>
+</body>
+</html>
