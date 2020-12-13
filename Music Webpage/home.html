@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+background: url("image5.jpeg") no-repeat;
+    background-size: cover;
+    /*overflow: scroll;*/
+    overflow-x: hidden;
+}
+
+/*Search*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 100px;
+}
+.container .search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: crimson;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+.container .search:hover {
+    cursor: pointer;
+}
+.container .search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 22px;
+    right: 0;
+    bottom: 0;
+    left: 22px;
+    width: 12px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+.container .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.5s;
+}
+.container input {
+    font-family: 'Inconsolata', monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: crimson;
+    color: white;
+    text-shadow: 0 0 10px crimson;
+    padding: 0 80px 0 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+}
+.container input:hover {
+    cursor: pointer;
+}
+.container input:focus {
+    width: 300px;
+    opacity: 1;
+    cursor: text;
+}
+.container input:focus ~ .search {
+    right: -250px;
+    background: #151515;
+    z-index: 6;
+}
+.container input:focus ~ .search::before {
+    top: 0;
+    left: 0;
+    width: 25px;
+}
+.container input:focus ~ .search::after {
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0;
+    transform: rotate(-45deg);
+}
+.container input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: bolder;
+}
+
+.threeD {
+    cursor: pointer;
+    color: blueviolet;
+    white-space: nowrap;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+    text-shadow: 1px 1px 0 lightsalmon, 1px 2px 0 red, 1px 3px 0 limegreen, 1px 4px 0 yellow,
+    1px 5px 0 limegreen, 1px 6px 0 white, 1px 7px 0 deepskyblue, 1px 8px 0 orangered,
+    5px 13px 15px lawngreen;
+}
+
+.threeD:hover {
+    transition: 0.3s;
+    transform: scale(1.1)translate(-50%, -50%);
+    text-shadow: 1px -1px 0 red, 1px -2px 0 orange, 1px -3px 0 yellow,
+    1px -4px 0 green, 1px -5px 0 lightblue, 1px -6px 0 indigo, 1px -7px 0 violet,
+    1px -8px 0 aquamarine, 5px -13px 15px lightgoldenrodyellow, 5px -13px 25px #808080;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: black; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/*Below the search bar*/
+
+.image-div{
+    background-color: black;
+    border: 2px solid black;
+    box-shadow: 0 0 13px gold;
+    width: 315px;
+    height: 300px;
+    padding: 5px;
+    border-radius: 15px;
+    float: left;
+    margin: 400px 50px;
+    text-align: center;
+}
+.image-div:hover{
+    box-shadow: 0 0 13px limegreen;
+}
+.zoom{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.zoom img{
+    max-width: 100%;
+    max-height: 100%;
+    transition: 1s;
+    cursor: pointer;
+}
+.zoom:hover img{
+    transform: scale(1.2,1.2);
+}
+.desc{
+    padding: 20px;
+    font-size: 40px;
+    color: white;
+}
+.zoom:hover{
+    box-shadow: 0 0 10px lightblue;
+}
+    .pic p{
+        color: antiquewhite;
+        font-size: 50px;
+        margin-top: 300px;
+        margin-bottom: -220px;
+        text-align: center;
+        text-shadow: 2px 2px 2px red;
+    }
+    .pic p:hover{
+        text-shadow: 2px 2px 2px green;
+        cursor: pointer;
+    }
+
+    /*Footer*/
+
+footer{
+    width: 100%;
+}
+.footer-distributed{
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 15px 50px;
+    margin: 1050px 0 -20px ;
+
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-distributed .footer-left{
+    width: 44%;
+}
+
+.footer-distributed h3{
+    color:  #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span{
+    color:  #5383d3;
+}
+
+
+.footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+    color:  #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+.footer-distributed .footer-center{
+    width: 35%;
+}
+
+.footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin:0;
+}
+
+.footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+    color:  #5383d3;
+    text-decoration: none;;
+}
+
+.footer-distributed .footer-right{
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+
+@media (max-width: 880px) {
+
+    .footer-distributed{
+        font: bold 14px sans-serif;
+
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i{
+        margin-left: 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#"><i class="fas fa-headphones-alt"></i> My Music</a>
+    <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login/Sign-Up</a>
+    <a href="contact.html"><i class="far fa-address-book"></i> Queries</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span style="font-size:40px;cursor:pointer; color: red" onclick="openNav()">&#9776;</span>
+
+<div id="main">
+    <div class="threeD">
+        Alloy Music
+    </div>
+    <!-- Search -->
+    <div class="container">
+        <input type="text" placeholder="Search...">
+        <div class="search"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--Cards-->
+<div class="pic">
+    <p>Scroll Down </p>
+    <div class="image-div">
+        <div class="zoom">
+            <a href="regional.html"><img src="telugu-language-slips-to-no-4-slot--census-2018-06-30-085332.png"></a>
+        </div>
+        <div class="desc">Regional</div>
+    </div>
+
+    <div class="image-div">
+        <div class="zoom">
+            <a href="hindi.html"><img src="img_avatar.png"></a>
+        </div>
+        <div class="desc">Hindi</div>
+    </div>
+
+    <div class="image-div">
+        <div class="zoom">
+            <a href="english.html"><img src="img_avatar.png"></a>
+        </div>
+        <div class="desc">English</div>
+    </div>
+</div>
+
+    <!--Footer-->
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3>Alloy<span>Music</span></h3>
+
+            <p class="footer-links">
+                <a href="home.html">Home</a>
+                ·
+                <a href="#">My Music</a>
+                ·
+                <a href="login.html">Login/Sign-Up</a>
+                ·
+                <a href="contact.html">Queries</a>
+            </p>
+
+            <p class="footer-company-name">AlloyMusic &copy; 2019</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Lovely Professional University</span> Punjab, India</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91-7536667788</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="#">contact@alloymusic.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span>
+                Alloy Music is the most popular online music streaming website &amp; where all the fun is waiting for you ;-)
+            </p>
+
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+</div>
+</body>
+</html>
